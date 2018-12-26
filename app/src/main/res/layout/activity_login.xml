@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.single.constrainlayout.LoginActivity">
+
+    <TextView
+        android:id="@+id/has_biaori"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="25dp"
+        android:gravity="center_vertical"
+        android:text="有标日账号"
+        android:textColor="@color/color_1AB1F6"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--在设置高度的时候，可以去动态设置高度的模式，fixed：会指定高度的大小
+    match_constrainLayout：会动态匹配约束的高度，
+    wrap_content就是按照图片的大小来匹配-->
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/icon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_below="@id/has_biaori"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@mipmap/icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/has_biaori" />
+
+    <EditText
+        android:id="@+id/input_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/icon"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="56dp"
+        android:background="@null"
+        android:hint="请输入手机号"
+        android:inputType="number"
+        android:paddingBottom="12.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon" />
+
+    <View
+        android:id="@+id/call_line"
+        style="@style/horizontal_line"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/input_call"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#E6E6E6"
+        app:layout_constraintTop_toBottomOf="@+id/input_call" />
+
+    <EditText
+        android:id="@+id/input_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:paddingBottom="12.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_call" />
+
+    <View
+        android:id="@+id/password_line"
+        style="@style/horizontal_line"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="#E6E6E6"
+        app:layout_constraintTop_toBottomOf="@+id/input_pass" />
+
+    <TextView
+        android:id="@+id/forget"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="4dp"
+        android:text="忘记密码"
+        android:textColor="@color/color_1AB1F6"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input_pass" />
+
+    <ImageView
+        android:id="@+id/kejian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_toLeftOf="@id/forget"
+        android:src="@mipmap/yincang"
+        android:textColor="@color/color_1AB1F6"
+        android:textSize="@dimen/text_14"
+        app:layout_constraintEnd_toStartOf="@+id/forget"
+        app:layout_constraintTop_toTopOf="@+id/input_pass" />
+
+    <TextView
+        android:id="@+id/denglu"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@id/password_line"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="37dp"
+        android:background="@drawable/recharge_select_back"
+        android:gravity="center"
+        android:text="登录"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_line" />
+
+    <ImageView
+        android:id="@+id/gouxuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:paddingRight="@dimen/dp_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/denglu"
+        tools:src="@mipmap/xingyu_huifu" />
+
+</android.support.constraint.ConstraintLayout>

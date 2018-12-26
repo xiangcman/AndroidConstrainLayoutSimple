@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@mipmap/shop_back" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_head"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="@dimen/dp_20"
+        android:src="@mipmap/sys_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view_bg" />
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2434"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bg"
+        app:layout_constraintBottom_toTopOf="@id/tv_2"
+        app:layout_constraintLeft_toLeftOf="@id/tv_2"
+        app:layout_constraintLeft_toRightOf="@+id/iv_head"
+        app:layout_constraintRight_toRightOf="@id/tv_2"
+        app:layout_constraintTop_toTopOf="@+id/view_bg"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="37dp"
+        android:maxWidth="200dp"
+        android:text="已有营币"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_bg"
+        app:layout_constraintLeft_toRightOf="@+id/iv_head"
+        app:layout_constraintTop_toBottomOf="@+id/tv_1" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="tv_1,tv_2" />
+
+    <View
+        android:id="@+id/view_vertical"
+        android:layout_width="0.5dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="29dp"
+        android:background="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bg"
+        app:layout_constraintLeft_toRightOf="@id/barrier"
+        app:layout_constraintRight_toLeftOf="@id/barrier1"
+        app:layout_constraintTop_toTopOf="@+id/view_bg" />
+
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10005"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view_bg"
+        app:layout_constraintBottom_toTopOf="@id/tv_4"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_4"
+        app:layout_constraintRight_toRightOf="@+id/tv_4"
+        app:layout_constraintTop_toTopOf="@+id/view_bg"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tv_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="29dp"
+        android:text="已有经验值"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/view_bg"
+        app:layout_constraintLeft_toRightOf="@+id/view_vertical"
+        app:layout_constraintTop_toBottomOf="@+id/tv_3" />
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="start"
+        app:constraint_referenced_ids="tv_3,tv_4" />
+
+</android.support.constraint.ConstraintLayout>
